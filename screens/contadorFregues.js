@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '60%',
-    marginBottom: 20, // Adiciona espaçamento entre os botões e o botão de "Zerar"
+    marginBottom: 20, 
   },
   button: {
     backgroundColor: '#007BFF',
@@ -78,8 +78,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   resetButton: {
-    backgroundColor: '#FF6347', // Cor diferente para o botão "Zerar"
-    marginTop: 20, // Espaçamento superior para o botão "Zerar"
+    backgroundColor: '#FF6347', 
+    marginTop: 20, 
   },
   buttonText: {
     color: '#fff',

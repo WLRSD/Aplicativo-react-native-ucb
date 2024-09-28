@@ -5,9 +5,9 @@ import { Button, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 // Importar as telas
 import cronometro from './screens/cronometro';
-import biscoito from './screens/biscoito';
+import FortuneCookieApp from './screens/FortuneCookieApp';
 // Ainda precisamos criar as telas de coach e contador
-import coach from './screens/coach';
+import QuotesApp from './screens/QuotesApp';
 import contadorFregues from './screens/contadorFregues';
 
 const Stack = createStackNavigator();
@@ -23,12 +23,12 @@ function HomeScreen({ navigation }) {
       </TouchableOpacity>
 
       {/* Botão personalizado para "Biscoito da Sorte" */}
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('biscoito')}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('FortuneCookieApp')}>
         <Text style={styles.buttonText}>IR PARA BISCOITO DA SORTE</Text>
       </TouchableOpacity>
 
       {/* Botão personalizado para "Aplicativo de Coach" */}
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('coach')}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('QuotesApp')}>
         <Text style={styles.buttonText}>IR PARA APLICATIVO DE COACH</Text>
       </TouchableOpacity>
 
@@ -46,8 +46,8 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="cronometro" component={cronometro} />
-        <Stack.Screen name="biscoito" component={biscoito} />
-        <Stack.Screen name="coach" component={coach} />
+        <Stack.Screen name="FortuneCookieApp" component={FortuneCookieApp} />
+        <Stack.Screen name="QuotesApp" component={QuotesApp} />
         <Stack.Screen name="contadorFregues" component={contadorFregues} />
       </Stack.Navigator>
     </NavigationContainer>
