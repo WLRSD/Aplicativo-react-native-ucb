@@ -9,6 +9,7 @@ import FortuneCookieApp from './screens/FortuneCookieApp';
 // Ainda precisamos criar as telas de coach e contador
 import QuotesApp from './screens/QuotesApp';
 import contadorFregues from './screens/contadorFregues';
+import Aula from './screens/aula'; // Ajustei a importação para manter consistência com o Stack.Navigator
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,11 @@ function HomeScreen({ navigation }) {
         <Text style={styles.buttonText}>IR PARA APLICATIVO DE COACH</Text>
       </TouchableOpacity>
 
+      {/* Botão personalizado para "Aplicativo da aula" */}
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Aula')}>
+        <Text style={styles.buttonText}>IR PARA APLICATIVO DA AULA</Text>
+      </TouchableOpacity>
+
       {/* Botão personalizado para "Contador de Freguês" */}
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('contadorFregues')}>
         <Text style={styles.buttonText}>IR PARA CONTADOR DE FREGUÊS</Text>
@@ -49,6 +55,7 @@ export default function App() {
         <Stack.Screen name="FortuneCookieApp" component={FortuneCookieApp} />
         <Stack.Screen name="QuotesApp" component={QuotesApp} />
         <Stack.Screen name="contadorFregues" component={contadorFregues} />
+        <Stack.Screen name="Aula" component={Aula} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );
